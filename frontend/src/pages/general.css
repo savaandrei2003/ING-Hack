@@ -1,0 +1,20 @@
+.hello {
+    color: #FF6201; 
+}
+/* Adaugă acest CSS în fișierul tău CSS dacă nu folosești Tailwind pentru partea de poziționare */
+.proba {
+    background-color: #FF6201; /* sau folosește clasă Tailwind `bg-blue-500` */
+    position: relative; /* Face acest div să fie în contextul de poziționare */
+     /* sau folosește clasă Tailwind `border-b-2 border-black` */
+    margin-bottom: -30px;
+    z-index: 100;
+    border-radius: 20px 20px 20px 20px;
+  }
+  
+  .bg-white {
+    position: absolute;
+    background-color: #6BC4A6;
+    border-radius: 0px 0px 20px 20px;
+    
+  }
+  
