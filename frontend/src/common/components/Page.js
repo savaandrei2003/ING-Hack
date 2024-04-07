@@ -14,7 +14,7 @@ export default function Page({ children }) {
   const icons = [
     { icon: img1, label: 'acasa' },
     { icon: img2, label: 'camera' },
-    { icon: img3, label: 'Cauta' },
+    { icon: img3, label: 'map' },
     { icon: img4, label: 'chat' }
   ];
 

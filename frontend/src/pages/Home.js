@@ -17,27 +17,7 @@ export default function Home() {
 
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
-  
-    // useEffect(() => {
-    //   setIsLoading(true);
-    //   const instance = axios.create({
-    //     baseURL: 'http://localhost:5000',
-    //     timeout: 1000,
-    //     headers: {'X-Custom-Header': 'foobar'}
-    //     });
 
-    //     instance.get('/home').then(response => {
-    //       setHomeInfo(response.data);
-    //       console.log(response.data);
-  
-    //       setIsError(false);
-    //       setIsLoading(false);
-    //     })
-    //     .catch(() => {
-    //       setIsError(true);
-    //       setIsLoading(false);
-    //     });
-    // }, []);
     useEffect(() => {
         setIsLoading(true);
         

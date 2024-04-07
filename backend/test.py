@@ -9,16 +9,16 @@ app = Flask(__name__)
 
 
 recycles = [
-# {
-#     "material" : "plastic",
-#     "points" : 10  ,
-#     "date" : "2021-09-01"
-# },
-# {
-#     "material" : "metal",
-#     "points" : 20 ,
-#     "date" : "2023-09-27"
-# },
+{
+    "material" : "plastic",
+    "points" : 10  ,
+    "date" : "2021-09-01"
+},
+{
+    "material" : "metal",
+    "points" : 20 ,
+    "date" : "2023-09-27"
+},
       
 ]
 def computePoints():
