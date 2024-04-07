@@ -2,17 +2,20 @@ import React from 'react';
 import './page.css';
 
 // import { faHamburger, faHome, faMap, faSearch } from '@fortawesome/free-solid-svg-icons';
-
+import img1 from '../assets/Vector.png';
+import img2 from '../assets/img2.png';
+import img3 from '../assets/img3.png';
+import img4 from '../assets/img4.png';
 import { Route, Link } from 'react-router-dom';
 
 
 export default function Page({ children }) {
 
   const icons = [
-    { icon: 1, label: 'acasa' },
-    { icon: 2, label: 'camera' },
-    { icon: 3, label: 'Cauta' },
-    { icon: 4, label: 'chat' }
+    { icon: img1, label: 'acasa' },
+    { icon: img2, label: 'camera' },
+    { icon: img3, label: 'Cauta' },
+    { icon: img4, label: 'chat' }
   ];
 
   return (
@@ -34,7 +37,8 @@ export default function Page({ children }) {
             <div className='flex flex-col items-center justify-center' key={index}>
               <Link to={`/${icon.label.toLowerCase()}`}> 
                 {/* <FontAwesomeIcon icon={icon.icon} className='text-orange' /> */}
-                <p className='text-black text-sm'>{icon.label}</p>
+                <img src={icon.icon } alt='icon' className='homeicon' />
+                {/* <p className='text-xs'>{icon.label}</p> */}
               </Link>
             </div>
           ))}

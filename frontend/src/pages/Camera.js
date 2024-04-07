@@ -1,5 +1,6 @@
 import Webcam from "react-webcam";
 import React, { useRef, useState, useEffect } from "react";
+import Page from "../common/components/Page";
 
 export default function Camera() {
   const webcamRef = useRef(null);
@@ -60,25 +61,31 @@ export default function Camera() {
   }, [intervalId]);
 
   return (
-    <div className="flex h-full bg-black justify-center">
-      <div className="bg-gray-800 h-full p-5 rounded-lg shadow-lg">
+    <Page>
+    <div className="flex  h-full justify-center items-center">
+      <div className="w-full p-5 rounded-lg shadow-lg">
         {isCameraActive ? (
           <Webcam
             audio={false}
             ref={webcamRef}
             screenshotFormat="image/jpeg"
             width="100%"
-            className="rounded-lg"
+            height="auto"
+            className="rounded-lg h-96"
             videoConstraints={{
               facingMode: "environment",
             }}
           />
         ) : (
-          <button onClick={startCamera} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition-colors duration-300">Start</button>
+          <div className="flex flex-col items-center justify-center">
+              <button onClick={startCamera} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition-colors duration-300">Start</button>
+
+          </div>
         )}
         <p className="text-white mt-4">{displayText}</p>
         {isCameraActive && <button onClick={stopCamera} className="px-4 py-2 mt-2 bg-red-500 text-white rounded hover:bg-red-700 transition-colors duration-300">Stop</button>}
       </div>
     </div>
+  </Page>
   );
 }
