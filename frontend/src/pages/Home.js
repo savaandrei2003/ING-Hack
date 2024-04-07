@@ -19,18 +19,45 @@ export default function Home() {
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
   
-    useEffect(() => {
-      setIsLoading(true);
-      const instance = axios.create({
-        baseURL: 'http://localhost:5000',
-        timeout: 1000,
-        headers: {'X-Custom-Header': 'foobar'}
-        });
+    // useEffect(() => {
+    //   setIsLoading(true);
+    //   const instance = axios.create({
+    //     baseURL: 'http://localhost:5000',
+    //     timeout: 1000,
+    //     headers: {'X-Custom-Header': 'foobar'}
+    //     });
 
-        instance.get('/home').then(response => {
-          setHomeInfo(response.data);
-          console.log(response.data);
+    //     instance.get('/home').then(response => {
+    //       setHomeInfo(response.data);
+    //       console.log(response.data);
   
+    //       setIsError(false);
+    //       setIsLoading(false);
+    //     })
+    //     .catch(() => {
+    //       setIsError(true);
+    //       setIsLoading(false);
+    //     });
+    // }, []);
+    useEffect(() => {
+        setIsLoading(true);
+        
+        fetch('http://localhost:5000/home', {
+          method: 'GET',
+          headers: {
+            'X-Custom-Header': 'foobar',
+            'Content-Type': 'application/json' // This is not necessary for GET requests, but is useful to include if you're also sending data
+          }
+        })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          setHomeInfo(data);
+          console.log(data);
           setIsError(false);
           setIsLoading(false);
         })
@@ -38,7 +65,8 @@ export default function Home() {
           setIsError(true);
           setIsLoading(false);
         });
-    }, []);
+      
+      }, []); 
 
     
     let sum = 0;
