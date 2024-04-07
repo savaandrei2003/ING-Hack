@@ -6,7 +6,53 @@ from PIL import Image
 from io import BytesIO
 app = Flask(__name__)
 
+
+
+recycles = [
+# {
+#     "material" : "plastic",
+#     "points" : 10  ,
+#     "date" : "2021-09-01"
+# },
+# {
+#     "material" : "metal",
+#     "points" : 20 ,
+#     "date" : "2023-09-27"
+# },
+      
+]
+def computePoints():
+    points = 0
+    print(recycles)
+    for recycle in recycles:
+        points += recycle['points']
+    return points
+
+homeInfo = {
+    "user_name": "Edi",
     
+    "recycles": recycles,
+}
+
+
+@app.route('/home', methods=['GET'])
+@cross_origin()
+def get_current_location():
+    return homeInfo
+
+@app.route('/add2recycles', methods=['POST'])
+@cross_origin()
+def add2recycles():
+    
+    data = request.get_json()
+    recycles.append(data)
+    
+    return {
+        'status': True,
+        'points': data['points']
+    }
+
+
 @app.route('/photo2material', methods=['POST'])
 @cross_origin()
 def photo2material():

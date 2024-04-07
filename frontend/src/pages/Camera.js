@@ -1,11 +1,12 @@
 import Webcam from "react-webcam";
 import React, { useRef, useState, useEffect } from "react";
 import Page from "../common/components/Page";
+import './general.css';
 
 export default function Camera() {
   const webcamRef = useRef(null);
   const [imgSrc, setImgSrc] = useState(null);
-  const [displayText, setDisplayText] = useState("");
+  const [displayText, setDisplayText] = useState("mama");
   const [isCameraActive, setIsCameraActive] = useState(false);
   const [intervalId, setIntervalId] = useState(null);
 
@@ -62,7 +63,7 @@ export default function Camera() {
 
   return (
     <Page>
-    <div className="flex  h-full justify-center items-center">
+    <div className="flex flex-col h-full justify-center items-center">
       <div className="w-full p-5 rounded-lg shadow-lg">
         {isCameraActive ? (
           <Webcam
@@ -82,9 +83,19 @@ export default function Camera() {
 
           </div>
         )}
-        <p className="text-white mt-4">{displayText}</p>
-        {isCameraActive && <button onClick={stopCamera} className="px-4 py-2 mt-2 bg-red-500 text-white rounded hover:bg-red-700 transition-colors duration-300">Stop</button>}
+        
+        {isCameraActive && <div className="flex flex-col items-center justify-center"><button onClick={stopCamera} className="px-4 py-2 mt-2 bg-red-500 text-white rounded hover:bg-red-700 transition-colors duration-300">Stop</button></div>}
       </div>
+
+      <div className='flex flex-col mt-10 w-5/6 h-10 recycle-bg rounded-xl items-center justify-around text-white'>
+                            
+          <div className='flex flex-col items-center  justify-center '>
+              <h1 className='text-xl'> </h1>
+              <p className='text-large resp'>{displayText}</p>
+          </div>
+                                                  
+      </div>
+
     </div>
   </Page>
   );

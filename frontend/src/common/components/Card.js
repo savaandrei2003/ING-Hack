@@ -6,7 +6,7 @@ export default function Card({ icon, material, date, points }) {
         <img src={icon} alt='icon' className='bottleicon' />
         <h1 className='text-small  mt-1'>{material}</h1>
         <h1 className='text-small  mt-1'>{date}</h1>
-        <p className='text-center mt-2 green'>{points}</p>
+        <p className='text-center mt-2 green'>{points}pt</p>
     </div>
   );
 }
