@@ -24,11 +24,12 @@
 //             // number = textToNumber(number);
 //             if (number) {
 //                 tabToIndex(number[0]);
+
 //             }
 
-//             if (result.text.includes('Go to') && href != null) {
-//                 window.location.href += href;
-//             }
+//             // if (result.text.includes('Go to') && href != null) {
+//             //     window.location.href += href;
+//             // }
 
 
 //         });
@@ -39,8 +40,8 @@
 
 // function stopRecording() {
 //   console.log('stop recording');
-//   var a = new Audio(chrome.runtime.getURL('recordings/yahu.mp3'))
-//   a.play();
+//   // var a = new Audio(chrome.runtime.getURL('recordings/yahu.mp3'))
+//   // a.play();
 //   mediaRecorder.stop();
 // }
 

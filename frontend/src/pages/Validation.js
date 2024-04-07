@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Page from '../common/components/Page';
 
+
 function Validation() {
   const [number, setNumber] = useState(''); // Starea pentru stocarea numărului introdus
 
@@ -20,26 +21,26 @@ function Validation() {
         result = {
             "material" : "Plastic",
             "points" : 10,
-            "date" : "2021-10-10" 
+            "date" : "2024-04-07" 
         }
 
     } else if(number >= 10 && number < 20) {
         result = {
             "material" : "Hârtie",
             "points" : 20,
-            "date" : "2021-10-10" 
+            "date" : "2024-04-07" 
         }
     } else if(number >= 20 && number < 30) {
         result = {
             "material" : "Sticlă",
             "points" : 30,
-            "date" : "2021-10-10" 
+            "date" : "2024-04-07" 
         }
     } else {
         result = {
             "material" : "Metal",
             "points" : 40,
-            "date" : "2021-10-10" 
+            "date" : "2024-04-07" 
         }
     }
 
@@ -84,6 +85,8 @@ function Validation() {
         Trimite Numărul
         </button>
     </div>
+    {/* <Speech /> */}
+    {/* <Scan /> */}
     </Page>
   );
 }

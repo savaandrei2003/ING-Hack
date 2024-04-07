@@ -10,7 +10,7 @@ export default function Camera() {
   const navigate = useNavigate();
   const webcamRef = useRef(null);
   const [imgSrc, setImgSrc] = useState(null);
-  const [displayText, setDisplayText] = useState("mama");
+  const [displayText, setDisplayText] = useState("");
   const [isCameraActive, setIsCameraActive] = useState(true);
   const [intervalId, setIntervalId] = useState(null);
 

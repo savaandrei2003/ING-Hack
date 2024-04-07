@@ -12,7 +12,7 @@ import {  Link } from 'react-router-dom';
 export default function Page({ children }) {
 
   const icons = [
-    { icon: img1, label: 'acasa' },
+    { icon: img1, label: '' },
     { icon: img2, label: 'camera' },
     { icon: img3, label: 'map' },
     { icon: img4, label: 'validation' }

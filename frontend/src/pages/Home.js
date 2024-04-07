@@ -65,7 +65,7 @@ export default function Home() {
                 <div className=' h-full mt-7 '>
 
                     <div className=''>
-                        <div className='flex proba h-32 border-b-2 items-center justify-center'>
+                        <div className='flex proba h-28 border-b-2 items-center justify-center'>
                             <div className=''>
                                 <h1 className='text-4xl text-white'>{sum} points</h1>
                             </div>
@@ -118,7 +118,7 @@ export default function Home() {
                     </div>
                 </div>
                 ) : (
-                  <p>Esti prost</p>
+                  <p>Nu e bine</p>
                 )
               ) : (
                 <p>Bravo</p>
