@@ -5,7 +5,6 @@ import './general.css';
 import { useState, useEffect } from 'react';
 import Card from '../common/components/Card';
 import img5 from '../common/assets/img5.png';
-import axios from 'axios';
 import CreditCard from '../common/components/CreditCard';
 
 export default function Home() {
