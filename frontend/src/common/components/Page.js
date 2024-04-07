@@ -6,7 +6,7 @@ import img1 from '../assets/Vector.png';
 import img2 from '../assets/img2.png';
 import img3 from '../assets/img3.png';
 import img4 from '../assets/img4.png';
-import { Route, Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 
 
 export default function Page({ children }) {
@@ -15,7 +15,7 @@ export default function Page({ children }) {
     { icon: img1, label: 'acasa' },
     { icon: img2, label: 'camera' },
     { icon: img3, label: 'map' },
-    { icon: img4, label: 'chat' }
+    { icon: img4, label: 'validation' }
   ];
 
   return (

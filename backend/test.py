@@ -30,7 +30,6 @@ def computePoints():
 
 homeInfo = {
     "user_name": "Edi",
-    
     "recycles": recycles,
 }
 
